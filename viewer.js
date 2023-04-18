@@ -27,8 +27,7 @@ const MAX_IMAGE_SIZE = 1024 * 1024;
 const CMAP_URL = "pdfjs-dist/cmaps/";
 const CMAP_PACKED = true;
 
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "pdfjs-dist/build/pdf.worker.js";
+//pdfjsLib.GlobalWorkerOptions.workerSrc =  "pdfjs-dist/build/pdf.worker.js";
 
 const DEFAULT_URL = "agenda.pdf";
 const DEFAULT_SCALE_DELTA = 1.1;
