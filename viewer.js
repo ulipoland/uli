@@ -23,13 +23,13 @@ if (!pdfjsLib.getDocument || !pdfjsViewer.PDFViewer) {
 const USE_ONLY_CSS_ZOOM = true;
 const TEXT_LAYER_MODE = 0; // DISABLE
 const MAX_IMAGE_SIZE = 1024 * 1024;
-const CMAP_URL = "../../node_modules/pdfjs-dist/cmaps/";
+const CMAP_URL = "pdfjs-dist/cmaps/";
 const CMAP_PACKED = true;
 
 pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "../../node_modules/pdfjs-dist/build/pdf.worker.js";
+  "pdfjs-dist/build/pdf.worker.js";
 
-const DEFAULT_URL = "../../web/compressed.tracemonkey-pldi-09.pdf";
+const DEFAULT_URL = "agenda.pdf";
 const DEFAULT_SCALE_DELTA = 1.1;
 const MIN_SCALE = 0.25;
 const MAX_SCALE = 10.0;
