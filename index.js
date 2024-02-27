@@ -30,7 +30,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://ulipoland.github.io/uli/PS2311_agenda.pdf",
+                url: "https://ulipoland.github.io/uli/PS2402_agenda.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 headers: [
@@ -45,7 +45,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* Pass meta data of file */
         metaData: {
             /* file name */
-            fileName: "PS2311_agenda.pdf"
+            fileName: "PS2402_agenda.pdf"
         }
     }, viewerConfig);
 });
