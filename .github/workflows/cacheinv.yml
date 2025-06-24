@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Wrzuca main do pages ale tez podmienia wersje za index?WERSJA
+name: Wrzuca main do pages ale tez podmienia wersje za index?WERSJA i Uli Poland Agenda 1234 na aktualny rok
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,6 +31,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Cache busting for index.js
+        run: |
+          TIMESTAMP=$(date +%s)
+          sed -i "s|src='index.js?[^']*'|src='index.js?v=$TIMESTAMP'|" index.html
+      - name: Update page title if matches pattern
+        run: |
+          YEAR=$(date +%Y)
+          sed -i "s|<title>Uli Poland Agenda [0-9]\{4\}</title>|<title>Uli Poland Agenda $YEAR</title>|" index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
