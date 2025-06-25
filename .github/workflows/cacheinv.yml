@@ -34,7 +34,9 @@ jobs:
       - name: Cache busting for index.js
         run: |
           TIMESTAMP=$(date +%s)
-          sed -i "s|src='index.js?[^']*'|src='index.js?v=$TIMESTAMP'|" index.html
+          sed -i "s|src=\"index.js.*\"|src=\"index.js?v=$TIMESTAMP\"|" index.html
+          # Dla pewności - obsługa obu rodzajów cudzysłowów
+          sed -i "s|src='index.js.*'|src='index.js?v=$TIMESTAMP'|" index.html
       - name: Update page title if matches pattern
         run: |
           YEAR=$(date +%Y)
