@@ -30,7 +30,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://ulipoland.github.io/uli/ULI_CONF26_agenda.pdf?2",
+                url: "https://ulipoland.github.io/uli/ULI_CONF26_agenda.pdf?3",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 headers: [
